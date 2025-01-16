@@ -1,15 +1,17 @@
-import './App.css'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Home from './screens/Home';
+import Product from './screens/Product';
 
-import Navigator from "./Components/Navigation/Navigator.jsx";
-import Router from "./Components/Navigation/Router.jsx";
-
-function App() {
+const App = () => {
   return (
-    <>
-      <Navigator />
-      <Router />
-    </>
-  )
-}
+    <Routes>
+      
+        <Route path="/" element={<Home />} />
+        <Route path="/products" element={<Product />} />
+      
+    </Routes>
+  );
+};
 
 export default App;
